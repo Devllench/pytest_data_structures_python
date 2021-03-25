@@ -1,9 +1,6 @@
 import pytest
 
 
-# from method_class import MethodClass
-
-
 class TestListClass:
 
     # list_1 = ['a', 'b', 'c']
@@ -30,14 +27,12 @@ class TestListClass:
         test_list.insert(3, data_test)
         assert test_list == valid_assert
 
-    # @pytest.mark.parametrize("data_test", ['abc'])
     @pytest.mark.parametrize("valid_assert", [['a', 'b', 'c', 'w']])
     def test_sort(self, test_list, valid_assert):
         test_list.sort()
         assert test_list == valid_assert
 
-    @pytest.mark.parametrize("data_test", ['abc'])
     @pytest.mark.parametrize("valid_assert", [['c', 'w', 'a', 'b']])
-    def test_reverse(self, test_list, data_test, valid_assert):
+    def test_reverse(self, test_list, valid_assert):
         test_list.reverse()
         assert test_list == valid_assert
