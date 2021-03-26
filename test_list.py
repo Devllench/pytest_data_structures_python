@@ -3,11 +3,6 @@ import pytest
 
 class TestListClass:
 
-    @pytest.fixture()
-    def test_list(self):
-        list_1 = ['b', 'a', 'w', 'c']
-        yield list_1
-
     @pytest.mark.parametrize("data_test", ['d'])
     @pytest.mark.parametrize("valid_assert", [['b', 'a', 'w', 'c', 'd']])
     def test_append(self, test_list, data_test, valid_assert):

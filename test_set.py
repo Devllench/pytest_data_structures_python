@@ -3,12 +3,6 @@ import pytest
 
 class TestSetClass:
 
-
-    @pytest.fixture()
-    def test_set(self):
-        set_1 = ['b', 'a', 'w', 'c', 'a', 'c']
-        yield set(set_1)
-
     @pytest.mark.parametrize("data_test", ['s'])
     @pytest.mark.parametrize("valid_assert", [True])
     def test_isdisjoint(self, test_set, data_test, valid_assert):
