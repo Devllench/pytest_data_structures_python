@@ -3,7 +3,7 @@ import pytest
 
 class TestSetClass:
 
-    # list_1 = ['a', 'b', 'c']
+
     @pytest.fixture()
     def test_set(self):
         set_1 = ['b', 'a', 'w', 'c', 'a', 'c']

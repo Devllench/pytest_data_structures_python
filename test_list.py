@@ -3,7 +3,6 @@ import pytest
 
 class TestListClass:
 
-    # list_1 = ['a', 'b', 'c']
     @pytest.fixture()
     def test_list(self):
         list_1 = ['b', 'a', 'w', 'c']
